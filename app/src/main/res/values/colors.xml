@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/defaultColorDark</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="whiteLight">#70ffffff</color>
+    <color name="dialogBack">#ffffff</color>
+    <color name="whiteLightTrans">#10ffffff</color>
+    <color name="gray">#75767d</color>
+    <color name="grey_text">#a7a9ac</color>
+    <color name="progress_gray">#35343c</color>
+    <color name="black">#000</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="_title">#d1595252</color>
+    <color name="defaultColor">#FFD700</color>
+    <color name="defaultColorDark">#DAA520</color>
+
+</resources>

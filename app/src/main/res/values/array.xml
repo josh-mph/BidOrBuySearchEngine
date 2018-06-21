@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="keywords">
+        <item>Default</item>
+        <item>New</item>
+        <item>Second hand</item>
+        <item>Refurbished</item>
+    </string-array>
+    <string-array name="trade_type">
+        <item>Default</item>
+        <item>Auctions</item>
+        <item>Buy Nows</item>
+        <item>Classifieds</item>
+    </string-array>
+    <string-array name="order_by">
+        <item>Default</item>
+        <item>Price</item>
+        <item>Ending</item>
+        <item>Opening</item>
+        <item>BidCount</item>
+        <item>Title</item>
+    </string-array>
+</resources>

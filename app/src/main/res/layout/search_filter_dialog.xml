@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_margin="15dp"
+    android:background="@drawable/dialog"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Search Filters"
+        android:textColor="@color/defaultColorDark"
+        android:textSize="28sp" />
+
+    <RelativeLayout
+        android:id="@+id/line"
+        android:layout_below="@id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/defaultColorDark" />
+
+    <LinearLayout
+        android:id="@+id/fields"
+        android:layout_below="@id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/results_per_page"
+            android:text="Results Per Page"
+            android:textColor="@color/defaultColorDark" />
+
+        <EditText
+            android:id="@+id/results_per_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border_transparent_light"
+            android:inputType="number"
+            android:hint="Default is 25"
+            android:padding="5dp"
+            android:textColor="@color/whiteLight" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:labelFor="@id/page_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Page Number"
+            android:textColor="@color/defaultColorDark" />
+
+        <EditText
+            android:id="@+id/page_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_border_transparent_light"
+            android:inputType="number"
+            android:hint="Default is 1"
+            android:padding="5dp"
+            android:textColor="@color/whiteLight" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keyword"
+            android:textColor="@color/defaultColorDark" />
+
+        <Spinner
+            android:id="@+id/keyword_list"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:entries="@array/keywords"
+            android:background="@drawable/button_border_transparent_light" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trade Type"
+            android:textColor="@color/defaultColorDark" />
+
+        <Spinner
+            android:id="@+id/trade_type_list"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:entries="@array/trade_type"
+            android:background="@drawable/button_border_transparent_light" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order By"
+            android:textColor="@color/defaultColorDark" />
+
+        <Spinner
+            android:id="@+id/order_by_list"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:entries="@array/order_by"
+            android:background="@drawable/button_border_transparent_light" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        android:layout_below="@id/fields"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/defaultColorDark" />
+
+    <LinearLayout
+        android:layout_below="@id/line1"
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/cancel_search_enquiry_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="0.5"
+            android:background="@color/transparent"
+            android:text="Cancel"
+            android:textColor="@color/defaultColorDark"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/apply_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:layout_weight="0.5"
+            android:background="@color/transparent"
+            android:text="Apply"
+            android:textColor="@color/defaultColorDark"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
