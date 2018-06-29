@@ -58,7 +58,8 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
         TradeObject tradeObject = tradeObjectList.get(position);
         holder.title.setText(tradeObject.getTitle());
-        holder.type.setText(tradeObject.getType());
+        String fullDetails = tradeObject.getType()+"\nLocation: "+tradeObject.getLocation();
+        holder.type.setText(fullDetails);
         holder.price.setText(String.format(mContext.getString(R.string.currencyFormat), Float.valueOf(tradeObject.getAmount()).doubleValue()));
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();

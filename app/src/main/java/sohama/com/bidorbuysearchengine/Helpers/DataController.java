@@ -29,7 +29,7 @@ public class DataController {
     }
 
     public void getResults(String params) {
-        EndPoint = sharedClass.getEndPoint();//+"?"+params;
+        EndPoint = sharedClass.getEndPoint()+"?"+params;
         new DataFetcher().execute();
     }
 

@@ -19,7 +19,7 @@ public class SharedClass {
     private transient boolean isOffline;
     private transient DataController dataController;
     private transient String onlineTitle;
-    private transient String EndPoint = "https://demo.bidorbuy.co.za/services/v3/tradesearch";
+    private transient String EndPoint = " https://demo.bidorbuy.co.za/services/v3/tradesearch";
     private static transient Context appContext;
 
     protected SharedClass() {

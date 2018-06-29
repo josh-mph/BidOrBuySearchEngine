@@ -204,10 +204,34 @@ public class MainActivity extends AppCompatActivity implements DataObserver, Gen
                     SearchParams = SearchParams + "pageNumber=" + pageNumber + "&";
                 }
                 if (!IncludedKeywords.equals("Default")) {
-                    SearchParams = SearchParams + "IncludedKeywords=" + IncludedKeywords + "&";
+                    String val = "";
+                    switch (TradeType) {
+                        case "New":
+                            val = "NEW";
+                            break;
+                        case "Second hand":
+                            val = "SECOND_HAND";
+                            break;
+                        case "Refurbished":
+                            val = "REFURBISHED";
+                            break;
+                    }
+                    SearchParams = SearchParams + "IncludedKeywords=" + val + "&";
                 }
                 if (!TradeType.equals("Default")) {
-                    SearchParams = SearchParams + "TradeType=" + TradeType + "&";
+                    String val = "";
+                    switch (TradeType) {
+                        case "Auctions":
+                            val = "ENGLISH_AUCTION";
+                            break;
+                        case "Buy Nows":
+                            val = "FIXED_PRICE";
+                            break;
+                        case "Classifieds":
+                            val = "CLASSIFIED_CONTACT";
+                            break;
+                    }
+                    SearchParams = SearchParams + "TradeType=" + val + "&";
                 }
                 if (!OrderBy.equals("Default")) {
                     SearchParams = SearchParams + "OrderBy=" + OrderBy;
@@ -215,13 +239,12 @@ public class MainActivity extends AppCompatActivity implements DataObserver, Gen
 
                 Toast.makeText(v.getContext(), "Filters Applied.", Toast.LENGTH_LONG).show();
 
-                if (!SearchValue.equals("")) {
-                    String searchStringBuilder = "query=" + SearchValue;
-                    if (!SearchParams.equals(""))
-                        searchStringBuilder += "&" + SearchParams;
-                    dataController = new DataController();
-                    dataController.getResults(searchStringBuilder);
-                }
+
+                String searchStringBuilder = "query=" + SearchValue;
+                if (!SearchParams.equals("")) searchStringBuilder += "&" + SearchParams;
+                dataController = new DataController();
+                dataController.getResults(searchStringBuilder);
+
                 dialogAlert.dismiss();
             }
         });
